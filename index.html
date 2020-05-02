@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // практическое задание
+        while (true)
+            var num = Math.floor(Math.random() * 9999) + 1;
+            var me_num;
+            var attempt = 0; // количество попыток
+            while (me_num != num)
+                var me_num = +prompt("угадайте четырехзначное число");
+                if(me_num > num) 
+                    attempt += 1;
+                    me_num = +prompt("слишком маленькое число, выберите еще раз");
+                else
+                    attempt += 1;
+                    me_num = +prompt("слишком большое число, выберите еще раз");
+            alert("поздравляю вы угадали за " + attempt + "попыток")
+        // 2 задание
+        var a = 2;
+        var x = 1 + (a *= 2); // 5
+        // 4 задание
+        var a = +prompt("введите первое число");
+        var b = +prompt("введите второе число");
+        if ((a >= 0) && (b >= 0))
+            if (a > b)
+                alert("разность чисел равна " + (a - b));
+            else
+                alert("разность чисел равна " + (b - a));
+        else if ((a < 0) && (b < 0))
+            alert("произведение чисел равна " + (a * b));
+        else 
+            alert("сумма чисел равна " + (a + b));
+        // 5 задание
+        var a = Math.floor(Math.random() * 16)
+        switch (a) {
+            case 0:
+                alert(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)
+                break
+            case 1:
+                alert(2,3,4,5,6,7,8,9,10,11,12,13,14,15)
+                break
+            case 2: 
+                alert(3,4,5,6,7,8,9,10,11,12,13,14,15)
+                break
+            case 3:
+                alert(4,5,6,7,8,9,10,11,12,13,14,15)
+                break
+            case 4:
+                alert(5,6,7,8,9,10,11,12,13,14,15)
+                break
+            case 5:
+                alert(6,7,8,9,10,11,12,13,14,15)
+                break
+            case 6:
+                alert(7,8,9,10,11,12,13,14,15)
+                break
+            case 7:
+                alert(8,9,10,11,12,13,14,15)
+                break
+            case 8:
+                alert(9,10,11,12,13,14,15)
+                break
+            case 9:
+                alert(10,11,12,13,14,15)
+                break
+            case 10:
+                alert(11,12,13,14,15)
+                break
+            case 11:
+                alert(12,13,14,15)
+                break
+            case 12:
+                alert(13,14,15)
+                break
+            case 13:
+                alert(14,15)
+                break
+            case 14:
+                alert(15)
+                break
+        }
+        // 5-6 задание
+        function funk(x,y,z)
+        {
+            switch (z) {
+                case '+': 
+                    return x + y
+                    break
+                case '-':
+                    return x - y
+                    break
+                case '*': 
+                    return x * y
+                    break
+                case '/':
+                    return x / y
+                    break
+            }
+        }
+        alert(funk(2,3, '+'))
+        // 7 задание
+        // 0 это false а null это отсутствие обьекта
+        // 8 задание 
+        function power(val, pow) 
+        {
+            if (pow == 1)
+                return val * val
+            else if (pow == 0)
+                return 0
+            else 
+                return power(val * val, pow - 1)
+        }
+    </script>
+</body>
+</html>
